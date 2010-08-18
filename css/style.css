@@ -1,0 +1,12 @@
+body{
+	background: #222222;
+	margin: 0;
+	padding: 0 15%;
+	font-family: 'Calibri', 'Gill Sans', 'Monaco', 'Lucida Grande', 'Segoe Ui', 'Tahoma', sans-serif;
+	font-size: 10pt;
+}
+
+header{
+	background: url(/images/carbonf.png) repeat;
+	border: solid 1px white;
+}

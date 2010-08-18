@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Web Design  </title>
+	<link rel="stylesheet" href="/css/style.css" media='screen' />
+</head>
+<body id="index">
+	<header>
+		<div class='corner top left'></div>
+		<div class='corner top right'></div>
+		<h1 class='title'> Web Design </h1>
+		<div class='clip top left'></div>
+		<div class='clip top right'></div>
+	</header>
+	<section>
+	</secton>
+	<footer>
+		<div class='clip bottom left'></div>
+		<div class='clip bottom right'></div>
+		<div class='corner bottom left'></div>
+		<div class='corner bottom right'></div>
+		<h3 class='footer'> &copy; Marcu Sabin - 2010 </div>
+	</footer>
+</body>
+</html>
+

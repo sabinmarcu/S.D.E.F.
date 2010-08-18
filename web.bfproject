@@ -1,0 +1,11 @@
+name: Web Design
+files: /var/www/index.html
+basedir: /var/www/
+webdir: 
+template: 
+word_wrap: 0
+opendir: /var/www
+view_html_toolbar: 1
+view_custom_menu: 1
+view_main_toolbar: 1
+view_left_panel: 1
