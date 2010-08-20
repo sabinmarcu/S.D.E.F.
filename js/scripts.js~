@@ -3,7 +3,7 @@ $(document).ready(function()	{
 	$("nav li").click(function() {
 		var id = $(this).attr('id');
 		if (!$(".container#"+id).length)
-		$("body").append("<div class='container' id='"+id+"'></div>").find(".container#"+id).draggable().resizable().animate({opacity: 1}, 500).load(id+".html");
+		$("body").append("<div class='container' id='"+id+"'></div>").find(".container#"+id).draggable().resizable().animate({opacity: 1}, 500);
 		else $(".container#"+id).animate({opacity: 0}, 500, 'linear', function()	{$(this).remove()});
 	});
 	

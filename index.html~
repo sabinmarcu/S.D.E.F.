@@ -3,7 +3,6 @@
 <head>
 	<title> Web Design  </title>
 	<script type="text/javascript" src="/js/jquery.min.js"></script>
-	<script type="text/javascript" src="/js/jquery.ui.min.js"></script>
 	<script type="text/javascript" src="/js/scripts.js"></script>
 	<link rel="stylesheet" href="/css/style.css" media='screen' />
 </head>
