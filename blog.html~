@@ -1,6 +1,27 @@
-<style>
-	container#blog{
-		background: black;
-	}
-</style>
+<section>
+	<h2>	Cele mai noi postari ;) 	</h2>
+	<article>
+		<h3>	Postare #1 	</h3>
+		<p>	...	</p>
+	</article>
+	<article>
+		<h3>	Postare #2 	</h3>
+		<p>	...	</p>
+	</article>
+	<article>
+		<h3>	Postare #3 	</h3>
+		<p>	...	</p>
+	</article>
+	<article>
+		<h3>	Postare #4 	</h3>
+		<p>	...	</p>
+	</article>
+	<article>
+		<h3>	Postare #5 	</h3>
+		<p>	...	</p>
+	</article>
+</section>
+
+
+	
 	
