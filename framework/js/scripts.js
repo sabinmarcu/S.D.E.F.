@@ -20,7 +20,7 @@ function Window(id)	{
 	this.init = function()	{
 		if (!$(".container#"+this.id).length)
 			$("body").append(
-				"<div class='container drag' id='"+ id +
+				"<div class='container' id='"+ id +
 				"' style='left:"+ this.x +
 				";top:"+ this.y +
 				";height:"+ this.height +
@@ -28,7 +28,7 @@ function Window(id)	{
 				"'></div>"
 			).find(".container#"+id)
 			.draggable({
-				cancel: 'section', 
+				cancel: '.content', 
 				drag: function(){
 					windows[this.id].x = $(this).css("left");
 					windows[this.id].y = $(this).css("top");
@@ -40,12 +40,10 @@ function Window(id)	{
 					windows[this.id].height = $(this).css("height");
 				}
 			})
-			.append("<div class='windowb' id='close'>X</div><div class='windowb' id='maximize'>[]</div><div class='windowb' id='minimize'>-</div><section></section>")
+			.append("<div class='windowb' id='close'>X</div><div class='windowb' id='maximize'>[]</div><div class='windowb' id='minimize'>-</div><div class='content'><section></section></div>")
 			.animate({opacity: 0.95}, 500)
-			.find("section").load("/framework/dispenser.php", {id: id}, function(){
-				$(this).parent().attr('id').css(height, this.height);
-			})
-			.parent()
+			.find("section").load("/framework/dispenser.php", {id: id})
+			.parent().parent()
 			.find(".windowb").click( function(){
 				windows[id].mod(
 					$(this).attr('id'), 
