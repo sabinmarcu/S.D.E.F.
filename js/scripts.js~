@@ -70,13 +70,13 @@ function Window(id)	{
 		break;
 		case 'minimize'	:
 			if (!$(".container#"+this.id).hasClass("minimized") && !$(".container#"+this.id).hasClass("maximized"))	this.minimize();
-			else if (!$(".container#"+this.id).hasClass("maximized"))this.restore();
+			else if (!$(".container#"+this.id).hasClass("maximized")) this.restore();
 		}
 	}
 	
 	//Maximize Method
 	this.maximize = function()	{
-		$(".container#"+this.id).animate({height: $(window).height(), width: $(window).width(), top: 0, left: 0}, 500).draggable('disable').addClass("maximized");	
+		$(".container#"+this.id).animate({height: $(window).height(), width: $(window).width(), top: 0, left: 0, 'z-index': 100}, 500).draggable('disable').addClass("maximized");	
 	}
 	
 	//Restore Method
