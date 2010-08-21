@@ -27,11 +27,13 @@
 	
 #### Developer
 
-	Asa te vreau !!! Partea buna pentru tine e ca totul e modular. Odata ce ai definit un plugin, scriptul il gaseste automat si iti adauga pluginul in bara de meniu. Totul se bazeaza pe ajax 
+	Asa te vreau !!! Partea buna pentru tine e ca totul e modular. Odata ce ai definit un plugin, scriptul il gaseste automat si iti adauga pluginul in bara de meniu. Totul se bazeaza pe ajax, deci prin urmare care este ca e multe, pagina principala a pluginului se deschide intr-o fereastra modala separata. Poti sa faci si un joc in WebGL ca nu ma supar, si nici scriptul nu se supara :P
 
 ## Cand va fi gata ?
 
 	Probabil niciodata. E un framework, ati uitat?
+	
+	Si in plus pluginurile vor fi updatate mereu ;)
 
 ### Alte intrebari ?
 
