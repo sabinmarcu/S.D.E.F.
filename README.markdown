@@ -44,7 +44,7 @@
 
 ### Alte intrebari ?
 
-Yahoo : vyrkolakos
-Mail : sabinmarcu@algorimetrica.infoc
+	Yahoo : vyrkolakos
+	Mail : sabinmarcu@algorimetrica.info
 
 ## Enjoy ;)
