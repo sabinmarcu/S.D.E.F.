@@ -1,0 +1,6 @@
+<?php
+	include $_SERVER['DOCUMENT_ROOT'].'/includes/markdown.php';
+	$file = fopen($_SERVER['DOCUMENT_ROOT'].'/plugins/example/index.html', 'r');
+	$file = fread($file, filesize($_SERVER['DOCUMENT_ROOT'].'/plugins/example/index.html'));
+	echo Markdown($file);
+?>

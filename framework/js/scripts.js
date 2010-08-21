@@ -7,7 +7,7 @@ function Window(id)	{
 			this.y = '100px';
 			this.x = ($(window).width() - 600) / 2 +"px";
 			this.width = '600px';	
-			this.height = '70%';
+			this.height = ($(window).height() / 100 * 70) + "px";
 			this.init();
 		}
 		else this.del(id);
@@ -42,9 +42,11 @@ function Window(id)	{
 			})
 			.append("<div class='windowb' id='close'>X</div><div class='windowb' id='maximize'>[]</div><div class='windowb' id='minimize'>-</div><section></section>")
 			.animate({opacity: 0.95}, 500)
-			.find("section").load(id+".html")
-			.parent().find(".windowb")
-			.click( function(){
+			.find("section").load("/framework/dispenser.php", {id: id}, function(){
+				$(this).parent().attr('id').css(height, this.height);
+			})
+			.parent()
+			.find(".windowb").click( function(){
 				windows[id].mod(
 					$(this).attr('id'), 
 					$(this).parent().attr('id')
@@ -57,7 +59,6 @@ function Window(id)	{
 	this.del = function()	{
 		$(".container#"+this.id).animate({opacity: 0}, 500, 'linear', function()	{$(this).remove()});
 	}
-	
 	
 	
 	//Window Action Controller
@@ -94,28 +95,6 @@ function Window(id)	{
 		$(".container#"+this.id).animate({opacity: 0}, 500).addClass("minimized");
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 windows = new Array();

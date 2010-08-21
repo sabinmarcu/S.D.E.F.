@@ -1,0 +1,7 @@
+<xml>
+	<plugin>
+		<name>Home</name>
+		<index>home</index>
+		<init>index.php</init>
+	</plugin>
+</xml>

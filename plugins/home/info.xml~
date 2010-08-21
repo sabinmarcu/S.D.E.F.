@@ -1,0 +1,6 @@
+<xml>
+	<plugin>
+		<name>Home</name>
+		<init>index.php</init>
+	</plugin>
+</xml>

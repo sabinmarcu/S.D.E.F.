@@ -1,0 +1,8 @@
+# The making of ...
+
+### Va voi arata acum cum se creaza un plugin asemanator celui "HOME" din stanga acestuia ...
+
+Asa, in primul rand sa explic ce face plugin-ul ... Pur si simplu traduce un fisier MARKDOWN in html, si apoi il printeaza :P
+Pe scurt, ceva extrem de simplu.
+---
+Vei avea nevoie de 3 fisiere
