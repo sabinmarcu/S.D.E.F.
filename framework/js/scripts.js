@@ -1,16 +1,20 @@
-function Window(id)	{
+function Window(id, type)	{
 	this.id = id;
+	if (!type)
+		this.type = 'clasic';
+	else this.type = 'type';
 
 	//	Construct / Destruct Handler
 	this.toggle = function()	{	
-		if (!$(".container#"+id).length)	{
+		if (!$(".container#"+this.id).length)	{
 			this.y = '100px';
 			this.x = ($(window).width() - 600) / 2 +"px";
 			this.width = '600px';	
 			this.height = ($(window).height() / 100 * 70) + "px";
 			this.init();
 		}
-		else this.del(id);
+		else if ($(".container#"+this.id).hasClass("minimized"))	this.restore();
+		else this.del();
 	}
 	
 	
@@ -18,7 +22,9 @@ function Window(id)	{
 	
 	// Constructor Method
 	this.init = function()	{
-		if (!$(".container#"+this.id).length)
+	
+		//Classic Window
+		if (!$(".container#"+this.id).length && this.type == 'clasic')
 			$("body").append(
 				"<div class='container' id='"+ id +
 				"' style='left:"+ this.x +
@@ -41,6 +47,40 @@ function Window(id)	{
 				}
 			})
 			.append("<div class='windowb' id='close'>X</div><div class='windowb' id='maximize'>[]</div><div class='windowb' id='minimize'>-</div><div class='content'><section></section></div>")
+			.animate({opacity: 0.95}, 500)
+			.find("section").load("/framework/dispenser.php", {id: id})
+			.parent().parent()
+			.find(".windowb").click( function(){
+				windows[id].mod(
+					$(this).attr('id'), 
+					$(this).parent().attr('id')
+				);});
+				
+				
+		// Admin Window	
+		else if (!$(".container#"+this.id).length && this.type == 'admin')
+			$("body").append(
+				"<div class='container' id='"+ id +
+				"' style='left:"+ this.x +
+				";top:"+ this.y +
+				";height:"+ this.height +
+				";width:"+ this.width +
+				"'></div>"
+			).find(".container#"+id)
+			.resizable({
+				resize: function(){
+					windows[this.id].width = $(this).css("width");
+					windows[this.id].height = $(this).css("height");
+				}
+			})
+			.draggable({
+				cancel: '.content', 
+				drag: function(){
+					windows[this.id].x = $(this).css("left");
+					windows[this.id].y = $(this).css("top");
+				}
+			})
+			.append("<div class='windowb' id='close'>X</div><div class='windowb' id='maximize'>[]</div><div class='windowb' id='minimize'>-</div><div class='content'><section class='admin'></section></div>").css(position, "absolute")
 			.animate({opacity: 0.95}, 500)
 			.find("section").load("/framework/dispenser.php", {id: id})
 			.parent().parent()
@@ -75,7 +115,7 @@ function Window(id)	{
 	
 	//Maximize Method
 	this.maximize = function()	{
-		$(".container#"+this.id).animate({height: $(window).height(), width: $(window).width(), top: 0, left: 0}, 500).draggable('disable').addClass("maximized");	
+		$(".container#"+this.id).draggable('disable').addClass("maximized").animate({height: $(window).height(), width: $(window).width(), top: 0, left: 0}, 500);	
 	}
 	
 	//Restore Method
