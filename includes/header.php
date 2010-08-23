@@ -11,3 +11,4 @@
 <body id="index">
 	<nav>
 		<ul>
+			<li id='admin'>Admin</li>

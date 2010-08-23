@@ -3,5 +3,15 @@
 		<name>Home</name>
 		<index>home</index>
 		<init>index.php</init>
+		<child>
+			<name>About Weagle</name>
+			<index>aweagle</index>
+			<init>index.php</init>
+		</child>
+		<child>
+			<name>About Marcu Sabin</name>
+			<index>aauthor</index>
+			<init>index.php</init>
+		</child>
 	</plugin>
 </xml>

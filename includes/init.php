@@ -1,8 +1,5 @@
 <?php
-	include 'connect.php';
 	include 'functions.php';
-	$plugins = get_plugins();
 	get_header();
-	print_plugins($plugins);
 	get_footer();
 ?>

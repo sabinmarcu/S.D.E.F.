@@ -1,7 +1,7 @@
 <xml>
 	<plugin>
-		<name>BLOG</name>
-		<index>blog</index>
+		<name>Example Plugin</name>
+		<index>test</index>
 		<init>index.php</init>
 	</plugin>
 </xml>

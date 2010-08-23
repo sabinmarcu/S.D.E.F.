@@ -1,6 +1,17 @@
 <xml>
 	<plugin>
 		<name>Home</name>
+		<index>home</index>
 		<init>index.php</init>
+		<option>
+			<name>About Weagle</name>
+			<index>aweagle</index>
+			<init>index.php</init>
+		</option>
+		<option>
+			<name>About Marcu Sabin</name>
+			<index>aauthor</index>
+			<init>index.php</init>
+		</option>
 	</plugin>
 </xml>
