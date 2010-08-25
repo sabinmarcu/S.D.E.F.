@@ -15,6 +15,10 @@
 			echo siteinfo('ownerinfo');			
 			?> </p>	<?php
 			break;
+		case 'admin'	:
+			?> <h2> Hail <span style='font-size: 20pt;'><script type='text/javascript'> $("section h2 span").html(user.name)</script></span>! </h2>	<?php
+			connect();
+			?> <label>Owner Name : </label><input type='text' value = '<?php echo siteinfo('owner') ?>'> <?php
 	}
 	echo Markdown($file);
 ?>

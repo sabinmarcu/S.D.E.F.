@@ -15,5 +15,6 @@
 			<index>aauthor</index>
 			<init>index.php</init>
 		</child>
+		<admin>admin.php</admin>
 	</plugin>
 </xml>

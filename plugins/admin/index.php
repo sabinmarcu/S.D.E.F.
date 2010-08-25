@@ -1,4 +1,6 @@
 <?php
 	include $plugin[dir]."/functions.php";
-	form('login');
+	if (secure($_POST['register'])) {
+		form('register');
+	}	else form('login');
 ?>

@@ -98,9 +98,12 @@ function Window(id, parent, name)	{
 	this.loadc = function(url, data)	{
 		var id = this.id;
 		var parent = this.parent;
-		if (parent)
+		if (parent && parent != "admin")
 	 		$(".container#"+id).find('section')
 				.load("/framework/dispenser.php", {id: parent, child: id}, function(){application[id].postload()});
+		else if (parent) 
+			 $(".container#"+id).find('section')
+				.load("/framework/dispenser.php", {id: id, child: parent}, function(){application[id].postload()});
 		else $(".container#"+id).find('section')
 				.load("/framework/dispenser.php", {id: id}, function(){application[id].postload()});
 	}

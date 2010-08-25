@@ -1,4 +1,8 @@
 <?php
-	include 'includes/functions.php';
-	$plugins = get_plugins();
+	session_start();
+	print_r($_SESSION);
+	session_unregister(id);
+	
+	print_r($_SESSION);
+	session_destroy();
 ?>

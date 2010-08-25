@@ -2,18 +2,24 @@ function populate(){
 	$.getJSON("/framework/php/plugins.php", function(plugins){
 		var content = "";
 		$.each(plugins, function(i, plugin){
-			if (plugin.haschildren == 1)	{
+			if (plugin.haschildren == 1 && plugin.admin)	{
 				content += "<li>"+plugin.name+"<ul>";			
 				$.each(plugin, function(j, child){
 					if (child.name)
 						content += "<li id='"+child.index+"' class='"+plugin.index+"'>"+child.name;
 						window.application[child.index] = new Window(child.index, plugin.index, child.name);
 				});
+				content += "<li class='admin' id='"+plugin.index+"-admin'>Admin</li>";
+				window.application[plugin.index+"-admin"] = new Window(plugin.index+"-admin", 'admin', plugin.name+" Admin");
 				content += "</ul>";
-			}	else {
+			}	else if (plugin.admin){
 				content += "<li id='"+plugin.index+"'>"+plugin.name;
 				window.application[plugin.index] = new Window(plugin.index, '', plugin.name);
-			}			
+				content += "<ul><li><li class='admin' id='"+plugin.index+"-admin'>Admin</li></ul";
+			}	else {
+					content += "<li id='"+plugin.index+"'>"+plugin.name;
+					window.application[plugin.index] = new Window(plugin.index, '', plugin.name);
+			}
 			content +=	"</li>";
 		});
 		$("nav ul").append(content).find("li").click(function() {
@@ -34,6 +40,7 @@ function getscripts(){
 }
 
 var application = new Array(new Window);
+var user = new Array();
 
 $(document).ready(function()	{	
 	populate();

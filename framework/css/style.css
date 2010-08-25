@@ -178,3 +178,6 @@ p{
 	font-size: 10pt;
 	color: #444;
 }
+nav li.admin{
+	display: none;
+}

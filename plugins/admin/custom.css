@@ -1,3 +1,34 @@
 nav li#loginout{
 	float:right;
 }
+
+.container#loginout section{
+	background: inherit;
+	color: #222;
+	overflow: hidden;
+	text-align: center;
+}
+.container#loginout form label, .container#loginout form input{
+	display: inline-block;
+	width: 45%;
+}
+.container#loginout form label{
+	color: #aaa;
+	font-weight: bold;
+	text-align: center;
+}
+.container#loginout form input{
+	background: #666;
+	border: solid 1px #ccc;
+	border-left: solid 1px #999;
+	border-bottom: solid 1px #999;
+	border-radius: 5px;
+	padding: 5px;
+	color: #ccc;
+}
+.container#loginout form input.button{
+	background: #999;
+	color: #fff;
+	width: 75%;
+	margin: 10px auto 0;
+}

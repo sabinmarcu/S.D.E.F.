@@ -31,7 +31,9 @@ function crawl($what)	{
 									$plugins[$i]["child".$n][init] = $dir.'/'.$file.'/'.parsekey($child, "init"); $child = removekey($child, "init");					
 									$content = removekey($content, 'child');					
 								}	
-							$plugins[$i][dir] = $dir.$file;
+							$plugins[$i][dir] = $dir.$file;	
+							if (strpos($content, "admin"))
+								$plugins[$i][admin] = $dir.$file."/".parsekey($content, "admin"); $content = removekey($content, "admin");	
 							$i++;
 							}	else if ($what == "css")	
 									while (strpos($content, "<style>")){
@@ -82,6 +84,7 @@ function secure($string){
 }
 
 function connect()	{
+	require $_SERVER['DOCUMENT_ROOT'].'/framework/config.php';
 	require $_SERVER['DOCUMENT_ROOT'].'/includes/connect.php';
 }
 function siteinfo($option)	{
