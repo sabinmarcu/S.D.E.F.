@@ -11,5 +11,7 @@
 	<?php print_css(crawl('css')); ?>
 </head>
 <body id="index">
+	<div id='javaoverlay'></div>
+	<div id='javascript'>This site functions exclusively on top of Javascript ... <br> My Sensors show me that you either have a browser that doesen't support it, either you don't have it enabled. <br> Anyhow, if this messange doesen't disappear in 2 seconds, then you really do not have Javascript, and need to fix this issue. <br> Please fix that if you want to proceed! <br><br> Thank you !</div>
 	<nav>
 		<ul>

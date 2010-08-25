@@ -43,5 +43,6 @@ var application = new Array(new Window);
 var user = new Array();
 
 $(document).ready(function()	{	
+	$("#javascript, #javaoverlay").delay(2000).hide(500);
 	populate();
 });
