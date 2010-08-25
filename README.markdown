@@ -1,4 +1,4 @@
-# Weagle Framework
+# S.D.E.F. - Short for Simulated Desktop Environment Framework
 
 ## Despre ce e vorba? ...
 
