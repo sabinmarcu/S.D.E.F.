@@ -1,5 +1,10 @@
 
+application['loginout'].preload = function(){
+	this.height = "";
+}
+	
 application['loginout'].postload = function(){
+	this.height = $(".container#loginout").css("height");
 	$("#register").click(function(){application['loginout'].switchform()});
 	$("form").submit(function(){
 		switch ($(this).attr('id'))	{
@@ -32,6 +37,7 @@ application['loginout'].postload = function(){
 
 application['loginout'].switchform = function() {
 	$(".container#loginout").find("section").load("/framework/dispenser.php", {id: 'loginout', register: 1}, function(){		
+		$(this).animate({height: 225}, 500);
 		$("form").submit(function(){
 				$.post("/framework/php/register.php", {
 					username: $("input#username").val(), 

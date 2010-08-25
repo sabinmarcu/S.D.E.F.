@@ -22,7 +22,7 @@
 			exit;
 		}
 		else {
-			$sql = mysql_query("INSERT INTO users (name, username, password, email, website) VALUES('".$data[name]."', '".$data[username]."', '".$data[password]."', '".$data[email]."', '".$data[website]."')");
+			$sql = mysql_query("INSERT INTO users (name, username, password, email, website) VALUES('".$data[name]."', '".$data[username]."', '".md5($data[password])."', '".$data[email]."', '".$data[website]."')");
 			if ($sql)		{
 					session_start();
 					$_SESSION[id] = $data[id];

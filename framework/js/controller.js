@@ -10,6 +10,7 @@ function Window(id, parent, name)	{
 			this.x = ($(window).width() - 600) / 2 +"px";
 			this.width = '600px';	
 			this.height = ($(window).height() / 100 * 70) + "px";
+			this.preload();
 			this.init();
 			this.loadc();
 		}
@@ -108,6 +109,7 @@ function Window(id, parent, name)	{
 				.load("/framework/dispenser.php", {id: id}, function(){application[id].postload()});
 	}
 	
-	//Customizable Function
+	//Customizable Functions
 	this.postload = function()	{}
+	this.preload = function()	{}
 }

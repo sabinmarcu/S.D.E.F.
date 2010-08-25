@@ -7,7 +7,7 @@
 		echo json_encode($data);
 	}	else {		
 		connect();
-		$sql = mysql_query("SELECT * FROM users WHERE username = '".secure($_POST['username'])."' AND password ='".secure($_POST['password'])."'");
+		$sql = mysql_query("SELECT * FROM users WHERE username = '".secure($_POST['username'])."' AND password ='".md5(secure($_POST['password']))."'");
 		if (mysql_num_rows($sql))	{
 			session_start();
 			$user = mysql_fetch_array($sql, MYSQL_ASSOC);
