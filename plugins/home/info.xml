@@ -3,13 +3,15 @@
 		<name>Home</name>
 		<index>home</index>
 		<init>index.php</init>
+		<style>custom.css</style>
+		<script>header.js</script>
 		<child>
-			<name>About Weagle</name>
+			<name>About This Website</name>
 			<index>aweagle</index>
 			<init>index.php</init>
 		</child>
 		<child>
-			<name>About Marcu Sabin</name>
+			<name>About The Author</name>
 			<index>aauthor</index>
 			<init>index.php</init>
 		</child>

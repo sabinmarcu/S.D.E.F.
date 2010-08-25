@@ -1,0 +1,13 @@
+.container.home section{
+	background: inherit;
+	color :#222;
+}
+
+.container.home#aweagle section{
+	background: #222;
+	color: #ddd;
+}
+
+.container.home#aweagle section h2{
+	color: #999;
+}

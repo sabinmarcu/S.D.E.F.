@@ -1,12 +1,19 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/includes/markdown.php';
-	switch ($postdata[1])	{
+	switch (secure($_POST['child']))	{
 		case 'aweagle' 	:
-			$file = fopen($_SERVER['DOCUMENT_ROOT'].'/plugins/home/file.markdown', 'r');
-			$file = fread($file, filesize($_SERVER['DOCUMENT_ROOT'].'/plugins/home/file.markdown'));
+			?> <h1>	Despre acest website : <?php
+			echo siteinfo('title');
+			?> </h1><p>	<?php
+			echo Markdown(siteinfo('longinfo'));			
+			?> </p>	<?php
 			break;
 		case 'aauthor'	:
-			echo bloginfo('owner');
+			?> <h1>	Despre autor : <?php
+			echo siteinfo('owner');
+			?> </h1><p>	<?php
+			echo siteinfo('ownerinfo');			
+			?> </p>	<?php
 			break;
 	}
 	echo Markdown($file);

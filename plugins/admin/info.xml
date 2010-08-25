@@ -1,0 +1,9 @@
+<xml>
+	<plugin>
+		<name>Login / Logout</name>
+		<index>loginout</index>
+		<init>index.php</init>
+		<style>custom.css</style>
+		<script>script.js</script>
+	</plugin>	
+</xml>

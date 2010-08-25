@@ -3,10 +3,5 @@
 		<name>Example Plugin</name>
 		<index>test</index>
 		<init>index.php</init>
-		<child>
-			<name>How to</name>
-			<index>howto</index>
-			<init>index.php</init>
-		</child>
 	</plugin>
 </xml>

@@ -11,5 +11,6 @@
 		<ul>
 		</ul>
 	</footer>
+	<?php print_js(crawl('js')); ?>
 </body>
 </html>

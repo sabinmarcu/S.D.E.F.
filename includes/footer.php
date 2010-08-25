@@ -3,8 +3,8 @@
 	<header>
 		<img src='/framework/images/eagle.png'>
 		<div>
-			<h1>Marcu Sabin</h1>
-			<span> Click the links above for some interactive fun ... </span>
+			<h1><?php echo siteinfo('title') ?></h1>
+			<span> <?php echo siteinfo('info') ?> </span>
 		</div>
 	</header>
 	<footer>

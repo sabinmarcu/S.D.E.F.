@@ -1,5 +1,3 @@
-# Weagle Framework
-
 ## Despre ce e vorba? ...
 
 	Un framework javascript flexibil, bazat pe o singura idee : Desktop Environment. 
