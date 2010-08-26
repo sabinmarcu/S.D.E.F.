@@ -107,7 +107,6 @@ header h1{
 	position: absolute;
 	background: white;
 	border: solid 2px #666;
-	-webkit-box-shadow: 0 0 25px #999;
 	opacity: 0;
 	overflow: hidden;
 	display: inline-block;
@@ -132,7 +131,7 @@ header h1{
 	width: 100%;
 }
 section{
-	background: #ddd;
+	background: white;
 	display: block;
 	padding: 15px;
 }
@@ -194,7 +193,7 @@ nav li.admin{
 #javascript{
 	font-family: sans-serif;
 	position: absolute;
-	top: 50%;
+	top: 25%;
 	left: 0;
 	text-align: center;
 	color: #991111;

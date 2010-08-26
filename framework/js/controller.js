@@ -31,8 +31,12 @@ function Window(id, parent, name)	{
 				";width:"+ this.width +
 				"'></div>"
 			).find(".container#"+id)
+			.mousedown(function(){				
+					$(".container").css("z-index", 10);
+					$(this).css("z-index", 9999);
+			})
 			.draggable({
-				cancel: '.content', 
+				cancel: '.content',
 				drag: function(){
 					application[this.id].x = $(this).css("left");
 					application[this.id].y = $(this).css("top");

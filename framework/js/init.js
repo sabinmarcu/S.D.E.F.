@@ -27,6 +27,8 @@ function populate(){
 			else application[$(this).attr('id')].toggle();
 		}).find("ul").hide();
 		getscripts();
+		$("#javascript").delay(500).fadeOut(500).fadeIn(500).delay(500).fadeOut(500).fadeIn(500).delay(500).fadeOut(500).fadeIn(500).delay(500).fadeOut(1000);
+		$("#javaoverlay").delay(2000).delay(1500).delay(2000).fadeOut(1000);
 	});
 }
 
@@ -43,6 +45,6 @@ var application = new Array(new Window);
 var user = new Array();
 
 $(document).ready(function()	{	
-	$("#javascript, #javaoverlay").delay(2000).hide(500);
+	$("#javascript").html("<h1> Initialising </h1> <br> My sensors indicate that you have a Javascript compatible browser. <br>  My sensors indicate that you have Javascript enabled also. <br><br><br> <br><br><br> Stand by for activation <br> ");
 	populate();
 });

@@ -10,13 +10,13 @@ application['loginout'].postload = function(){
 		switch ($(this).attr('id'))	{
 			case 'loginform' :
 				$.post("/framework/php/login.php", {username: $("input#username").val(), password: $("input#password").val()}, function(data){
-						if (data)	{
+						if (data['result'] == 'success')	{
 							user = data;
 							alert("Wellcome back "+data['name']+"!");
 							application['loginout'].del();
 							if (user['admin'] > 0)	$("nav li.admin").show();
 						}
-						else alert("Error. Data corrupted! \n Just kidding ;) ... The data you entered is incorrect.");
+						else alert("Computer sais no ... \n "+data['problem']);
 				}, 'json');
 				break;
 			case 'logoutform'	:
